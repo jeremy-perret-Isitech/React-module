@@ -1,0 +1,17 @@
+.card {
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(1, 1, 1, 0.15);
+    border-radius: 7px;
+    
+    transition: .3s linear;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.hover:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+}

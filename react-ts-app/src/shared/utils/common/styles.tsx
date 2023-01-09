@@ -1,0 +1,1 @@
+export const formatClassList = (stylePage: any, arrayList: string[]) => arrayList.map(d => stylePage[d]).join(' ');
