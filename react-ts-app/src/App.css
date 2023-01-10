@@ -1,4 +1,6 @@
 @import './shared/ressources/colors.css';
+@import './shared//ressources/margin.css';
+@import './shared//ressources/padding.css';
 
 *, ::before, ::after {
   box-sizing: border-box;

@@ -1,0 +1,6 @@
+.accordionHead {
+    background-color: #f1f1f1;
+    padding: 1em 5px;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+}

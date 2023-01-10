@@ -1,0 +1,6 @@
+.AccordionBody {
+    padding: 0 7px;
+    margin: auto;
+    overflow: hidden;
+    transition: all .5s;
+}

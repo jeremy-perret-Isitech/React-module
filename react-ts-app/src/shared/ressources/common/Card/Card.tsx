@@ -1,4 +1,4 @@
-import { Fragment, ReactElement } from "react"
+import { Fragment } from "react"
 import styles from './Card.module.css';
 import { formatClassList } from "../../../utils/common/styles";
 
