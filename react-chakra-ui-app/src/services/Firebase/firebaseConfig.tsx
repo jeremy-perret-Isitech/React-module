@@ -4,7 +4,7 @@ export const firebaseApp = () =>
 {
   return initializeApp(
   {
-    apiKey: "AIzaSyByr_IVP1TYz-Y6_tJJ0ndrxUmufIZcKOk",
+    apiKey: process.env.REACT_APP_FIREBASE_KEY,
     authDomain: "red-equinox-304717.firebaseapp.com",
     projectId: "red-equinox-304717",
     storageBucket: "red-equinox-304717.appspot.com",
