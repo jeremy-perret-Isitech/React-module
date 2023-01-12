@@ -3,7 +3,6 @@ import {
     Flex,
     Text,
     IconButton,
-    Button,
     Stack,
     Collapse,
     Icon,
@@ -20,6 +19,7 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
 } from '@chakra-ui/icons';
+import { isLogged } from '../../../services/session';
 
 const Header = (props: any) => {
     const { isOpen, onToggle } = useDisclosure();
@@ -55,9 +55,17 @@ const Header = (props: any) => {
                     </Flex>
                 </Flex>
 
-                <Link _hover={{}} href="./auth">
-                    Sign In / Sign Up
-                </Link>
+                {isLogged(false) ?
+
+                    <Link _hover={{}} href="./auth">
+                        Log Out
+                    </Link>
+                    :
+                    <Link _hover={{}} href="./auth">
+                        Sign In / Sign Up
+                    </Link>
+                }
+
             </Flex>
 
             <Collapse in={isOpen} animateOpacity>

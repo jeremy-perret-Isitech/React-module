@@ -26,7 +26,7 @@ const FireBaseAuthentication = () => {
 
 
   return (
-    <Button>g</Button>
+    <Button>Login</Button>
   );
 }
 // TODO: Replace the following with your app's Firebase project configuration

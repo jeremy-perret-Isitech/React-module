@@ -4,12 +4,9 @@ import {
     FormControl,
     FormLabel,
     Input,
-    Checkbox,
     Stack,
-    Link,
     Button,
     Heading,
-    Text,
     useColorModeValue,
 } from '@chakra-ui/react';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
@@ -20,18 +17,18 @@ const AuthenticationPage = () => {
         const auth = getAuth(firebaseApp());
         const email = "test@test.test";
         const password = "testtest";
-      
+
         signInWithEmailAndPassword(auth, email, password)
-          .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            console.log(user)
-            // ...
-          })
-          .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-          });
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                console.log(user)
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+            });
     }
 
     return (
@@ -60,7 +57,7 @@ const AuthenticationPage = () => {
                         </FormControl>
                         <Stack>
                             <Button onClick={submitFormData}
-                            mt={5}
+                                mt={5}
                                 bg={'blue.400'}
                                 color={'white'}
                                 _hover={{

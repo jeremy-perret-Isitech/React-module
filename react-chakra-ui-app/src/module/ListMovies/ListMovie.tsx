@@ -9,7 +9,6 @@ const ListMovie = (props: any) => {
                 ))
             }
         </Flex>
-
     )
 }
 
