@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { UserContext } from "./UserAccount";
-import { Box, Text, List, ListItem, Flex, Container, useColorModeValue } from "@chakra-ui/react";
+import { IUserHistory, UserContext } from "./UserAccount";
+import { Box, Text, List, ListItem, Flex, Container } from "@chakra-ui/react";
 
 const UserHistory = () => {
     const user = useContext(UserContext);
@@ -8,8 +8,8 @@ const UserHistory = () => {
         <Container mt={10} maxW={"container.xl"}>
             <Flex flexDirection="row" gap={5} flexWrap={"wrap"} alignItems={"center"}>
                 {
-                    user.map((userAction: any) => (
-                        <Box padding={5} border='1px' borderColor="black">
+                    user.map((userAction: IUserHistory) => (
+                        <Box key={userAction.id} padding={5} border='1px' borderColor="black">
                             <Text
                                 fontSize={{ base: '16px', lg: '18px' }}
                                 color='yellow.500'
@@ -23,19 +23,24 @@ const UserHistory = () => {
                                     <Text as={'span'} fontWeight={'bold'}>
                                         Action :
                                     </Text>{' '}
-                                    {userAction.userHistoryEvent.action}
+                                    {userAction.action}
+                                </ListItem>
+                                <ListItem>
+                                    <Text as={'span'} fontWeight={'bold'}>
+                                        New value :
+                                    </Text>{' '}
+                                    {userAction.newValue}
                                 </ListItem>
                                 <ListItem>
                                     <Text as={'span'} fontWeight={'bold'}>
                                         Action Date :
                                     </Text>{' '}
-                                    {userAction.userHistoryEvent.date.toDateString()}
+                                    {userAction.date.toDateString()}
                                 </ListItem>
                             </List>
                         </Box>
                     ))
                 }
-
             </Flex>
         </Container>
     );
